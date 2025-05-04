@@ -1,0 +1,512 @@
+/* ============================================== */
+/* common */
+/* ============================================== */
+body
+{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+button
+{
+    background-color: black;
+    border: 1px solid wheat;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover
+{
+    background-color: #555555;
+}
+
+button:active
+{
+    background-color: black;
+}
+
+input
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+/* ============================================== */
+/* animate */
+/* ============================================== */
+.idAnimateShow {
+    animation-name: idAnimateShow;
+    animation-duration: 0.4s;
+    -webkit-animation-name: idAnimateShow;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-name: idAnimateShow;
+    -moz-animation-duration: 0.4s;
+    -o-animation-name: idAnimateShow;
+    -o-animation-duration: 0.4s;
+}
+
+@keyframes idAnimateShow {
+    from {top:-400px; opacity:0;}
+    to {top:0; opacity:1}
+}
+
+@-webkit-keyframes idAnimateShow {
+    from {top:-400px; opacity:0;}
+    to {top:0; opacity:1;}
+}
+
+@-moz-keyframes idAnimateShow {
+    from {top:-400px; opacity:0;}
+    to {top:0; opacity:1;}
+}
+
+@-o-keyframes idAnimateShow {
+    from {top:-400px; opacity:0;}
+    to {top:0; opacity:1;}
+}
+
+.idAnimateHide {
+    animation-name: idAnimateHide;
+    animation-duration: 0.4s;
+    -webkit-animation-name: idAnimateHide;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-name: idAnimateHide;
+    -moz-animation-duration: 0.4s;
+    -o-animation-name: idAnimateHide;
+    -o-animation-duration: 0.4s;
+}
+
+@keyframes idAnimateHide {
+    from {top:0; opacity:1}
+    to {top:-400px; opacity:0}
+}
+
+@-webkit-keyframes idAnimateHide {
+    from {top:0; opacity:1}
+    to {top:-400px; opacity:0}
+}
+
+@-moz-keyframes idAnimateHide {
+    from {top:0; opacity:1}
+    to {top:-400px; opacity:0}
+}
+
+@-o-keyframes idAnimateHide {
+    from {top:0; opacity:1}
+    to {top:-400px; opacity:0}
+}
+/* ============================================== */
+/* body-page */
+/* ============================================== */
+.body-page-01
+{
+    padding: 5px;
+}
+/* ============================================== */
+/* logger-page */
+/* ============================================== */
+.logger-page-01 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logger-page-02
+{
+    background-color: white;
+    border: 1px solid #555555;
+    max-width: 460px;
+    margin: auto;
+    position: relative;
+}
+
+.logger-page-03
+{
+    background-color: black;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.logger-page-04
+{
+    padding: 20px 10px;
+}
+
+.logger-page-05
+{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 30px;
+    width: 30px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+.logger-page-05:hover
+{
+    background-color: #cccccc;
+}
+
+.logger-page-05:active
+{
+    background-color: white;
+}
+/* ============================================== */
+/* loader-page */
+/* ============================================== */
+.loader-page-01 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding: 20px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.loader-page-02 {
+    background-color: #010101;
+    border: 1px solid #555555;
+    margin: auto;
+    max-width: 480px;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.loader-page-03 {
+      text-align: center;
+      padding: 20px;
+}
+
+.loader-page-04 {
+      display: inline-block;
+}
+
+.loader-page-05 {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      animation: idLoaderRing 2s linear infinite;
+}
+
+.loader-page-05:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.loader-page-06 {
+    color: #f0f0f0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 120px;
+    text-align: center;
+    animation: idLoaderMsg 3s ease-in-out infinite;
+}
+
+@keyframes idLoaderRing {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+
+@keyframes idLoaderMsg {
+    50% {
+        color: #5f5f5f;
+    }
+}
+/* ============================================== */
+/* login-page */
+/* ============================================== */
+.login-page-01
+{
+    border: 1px solid black;
+    max-width: 500px;
+    margin: auto;
+}
+
+.login-page-02
+{
+    background-color: black;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.login-page-03
+{
+    padding: 10px;
+}
+
+.login-page-04
+{
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+}
+
+.login-page-05
+{
+    background-color: black;
+    display: inline-block;
+    color: white;
+    line-height: 30px;
+    min-width: 150px;
+    padding-left: 10px;
+}
+
+.login-page-06
+{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px 10px;
+}
+
+.login-page-07
+{
+    padding: 5px;
+}
+
+.login-page-08
+{
+    text-align: center;
+}
+
+.login-page-09
+{
+    text-align: center;
+}
+
+.login-page-10
+{
+    cursor: pointer;
+}
+
+.login-page-10:hover
+{
+    text-decoration: underline;
+}
+
+.login-page-10:active
+{
+    text-decoration: none;
+}
+
+.login-page-11
+{
+    text-align: center;
+}
+
+.login-page-12
+{
+    cursor: pointer;
+}
+
+.login-page-12:hover
+{
+    text-decoration: underline;
+}
+
+.login-page-12:active
+{
+    text-decoration: none;
+}
+/* ============================================== */
+/* account-page */
+/* ============================================== */
+.account-page-01
+{
+    border: 1px solid black;
+    max-width: 500px;
+    margin: auto;
+}
+
+.account-page-02
+{
+    background-color: black;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.account-page-03
+{
+    padding: 10px;
+}
+
+.account-page-04
+{
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+}
+
+.account-page-05
+{
+    background-color: black;
+    display: inline-block;
+    color: white;
+    line-height: 30px;
+    min-width: 150px;
+    padding-left: 10px;
+}
+
+.account-page-06
+{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px 10px;
+}
+
+.account-page-07
+{
+    padding: 5px;
+}
+
+.account-page-08
+{
+    text-align: center;
+}
+/* ============================================== */
+/* forgot-password-page */
+/* ============================================== */
+.forgot-password-page-01
+{
+    border: 1px solid black;
+    max-width: 500px;
+    margin: auto;
+}
+
+.forgot-password-page-02
+{
+    background-color: black;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.forgot-password-page-03
+{
+    padding: 10px;
+}
+
+.forgot-password-page-04
+{
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+}
+
+.forgot-password-page-05
+{
+    background-color: black;
+    display: inline-block;
+    color: white;
+    line-height: 30px;
+    min-width: 150px;
+    padding-left: 10px;
+}
+
+.forgot-password-page-06
+{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px 10px;
+}
+
+.forgot-password-page-07
+{
+    padding: 5px;
+}
+
+.forgot-password-page-08
+{
+    text-align: center;
+}
+
+.forgot-password-page-09
+{
+    text-align: center;
+}
+
+.forgot-password-page-10
+{
+    cursor: pointer;
+}
+
+.forgot-password-page-10:hover
+{
+    text-decoration: underline;
+}
+
+.forgot-password-page-10:active
+{
+    text-decoration: none;
+}
+/* ============================================== */
+/* end */
+/* ============================================== */
